@@ -1,0 +1,97 @@
+.wrapper {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-image:url(https://cdn.wallpapersafari.com/59/79/ZrNIRQ.jpg);*/
+    background-size: cover;
+} 
+   
+.form-wrapper {
+  margin: auto;
+  margin-top: auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0,0,0,.4);
+  background-color: rgba(191, 235, 235, 0.4);
+}
+
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.signup-h1 {
+  text-align: center;
+  width: 100%;
+  color: #008080;
+}
+
+.signup-input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  text-align: center;
+}
+
+.norm {
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #cfcfcf;
+    text-align: center;
+}
+
+.error {
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #cfcfcf;
+    text-align: center;
+}
+
+input::placeholder {
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: #999;
+}
+
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+  display: relative;
+}
+
+
+.Name,
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.Name,
+.email,
+.USN,
+.password {
+  width: 100%;
+}
+
+.createAccount {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
