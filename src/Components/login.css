@@ -4,6 +4,7 @@
 	box-shadow: 0 5px 5px rgba(0,0,0,.4);
 	margin: 5em auto;
 	display: flex;
+	box-shadow: 14px 14px 20px #cbced1,-14px -14px 20 px white;
 }
 .company__info{
 	background-color: #8fcccc;
@@ -41,6 +42,7 @@
 	border-bottom-right-radius:20px;
 	border-top:1px solid #ccc;
     border-right:1px solid #ccc;
+	box-shadow: 14px 14px 20px #cbced1,-14px -14px 20 px white;
 }
 form{
     padding: 0 2em;
@@ -56,6 +58,7 @@ form{
 	outline:none;
 	margin:1.5em auto;
 	transition: all .5s ease;
+	box-shadow: 14px 14px 20px#0b9b9b,-14px -14px 20 px white;
 }
 .form__input:focus{
 	border-bottom-color: #008080;
@@ -72,6 +75,7 @@ form{
 	border: 1px solid #008080;
 	margin-top: 1.5em;
 	margin-bottom: 1em;
+	margin-left: 2.5em;
 }
 .btn:hover, .btn:focus{
 	background-color: #008080;
@@ -80,4 +84,9 @@ form{
 .tr {
     padding-left: 18%;
     padding-top: 5%;
+}
+.loginheading{
+	font-weight: bold;
+	font-style:oblique;
+	margin-left: 1.5em;
 }

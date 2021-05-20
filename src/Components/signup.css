@@ -7,9 +7,12 @@
     align-items: center;
     /*background-image:url(https://cdn.wallpapersafari.com/59/79/ZrNIRQ.jpg);*/
     background-size: cover;
+    padding-top: 150px; 
+    box-shadow: 10px 10px 20px whitesmoke,-10px -10px 20 px white;
 } 
    
 .form-wrapper {
+  box-shadow: 10px 10px 20px whitesmoke,-10px -10px 20 px white;
   margin: auto;
   margin-top: auto;
   width: 400px;
@@ -25,12 +28,14 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  box-shadow: 14px 14px 20px whitesmoke,-14px -14px 20 px white;
 }
 
 .signup-h1 {
   text-align: center;
   width: 100%;
   color: #008080;
+  font-style:oblique;
 }
 
 .signup-input {
@@ -39,6 +44,8 @@
   outline: none;
   border: 1px solid #cfcfcf;
   text-align: center;
+  /* box-shadow: 14px 14px 20px #cbced1,-14px -14px 20 px white; */
+  box-shadow:inset 5px 5px 5px whitesmoke,inset -5px -5px 5px white;
 }
 
 .norm {
@@ -93,5 +100,6 @@ input::placeholder {
   flex-direction: column;
   align-items: center;
 }
-
-
+.warningtext{
+  font-weight: bolder;
+}

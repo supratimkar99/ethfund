@@ -122,7 +122,7 @@ export default class Signup extends Component {
         return (
             <div className="wrapper">
                 <div className="form-wrapper">
-                    <h1 className="signup-h1"> Create an Account</h1>
+                    <h1 className="signup-h1"> Create Account</h1>
                     <br />
                         <form onSubmit={this.onSubmit} className="signup-form">
                             <div className="Name">
@@ -161,7 +161,7 @@ export default class Signup extends Component {
                             </div>
                         </form>
                     </div>
-                <div>Already Have an account? <Link to="/login">Login</Link></div>
+                <div className="warningtext">Already Have an account? <Link to="/login">Login</Link></div>
             </div>
       )
   }

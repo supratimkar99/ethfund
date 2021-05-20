@@ -66,7 +66,7 @@ export default class Login extends Component {
                     <div className="col-md-9 col-xs-12 col-sm-12 login_form ">
                         <div className="container-fluid">
                             <div className="row tr">
-                                <h2>Log In</h2>
+                                <h2 className="loginheading">Log In</h2>
                             </div>
                             <div className="row">
                                 <form onSubmit={this.onSubmit} className="form-group">
