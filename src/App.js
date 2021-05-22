@@ -4,7 +4,7 @@ import "./logout.css"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// import Signup from "./Components/signup.component";
+import Signup from "./Components/signup.component";
 import Login from "./Components/login.component";
 import Page from "./Components/landing-page.component";
 import StartProject from "./Components/start-project.component";
@@ -18,7 +18,7 @@ class App extends Component {
         <Router>
             <Route path="/" exact component={Index} /> 
             <Route path="/page/:id" component={Page} />
-            {/* <Route path="/" exact component={Signup} /> */}
+            <Route path="/signup" component={Signup} /> 
             <Route path="/login" component={Login} />
             <Route path="/start/:id" component={StartProject} />
             <Route path="/view/:id" component={ProjectList} />

@@ -132,3 +132,18 @@
     margin-inline-start:-100px;
     align-content: center;
 }
+#btn{
+    border-radius: 15px;
+    box-shadow: 2px;
+    width:100px;
+    border-color: mediumblue;
+
+}
+#btn:hover{
+    background-color: mediumblue;
+}
+.nav-link{
+    margin-top: 20px;
+    display:inline;
+    font-size: 15px;
+}
