@@ -1,5 +1,6 @@
 import React from "react";
 import ethpic from "../Nav/ethpic.png";
+import {Link} from "react-router-dom";
 
 function Nav() {
     return (
@@ -14,15 +15,10 @@ function Nav() {
                         <li className="nav-itm active">
                             <a className="nav-link" href="#">Contact Us</a>
                         </li>
-                        <a className="btn btn-outline-dark start" id="btn" href="#">Login</a>
-                        <a className="btn btn-outline-dark start" id="btn" href="#">Sign Up</a> 
-                      
+                        <Link to={"/login/"}><a className="btn btn-outline-dark start" id="btn">Login</a></Link>
+                        <Link to={"/signup/"}><a className="btn btn-outline-dark start" id="btn" href="#">Sign Up</a></Link>
                     </ul>
-
-
                 </div>
-
-
             </div>
         </nav>
     );
