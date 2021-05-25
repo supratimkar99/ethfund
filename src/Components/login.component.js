@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "./login.css"
 import logo from "../ethpic.png";
+import Nav2 from "./Nav/Nav2";
 
 export default class Login extends Component {
 
@@ -54,10 +55,10 @@ export default class Login extends Component {
                 }
             });
     }
-
     render() {
         return (
             <div className="container-fluid">
+                <Nav2></Nav2>
                 <div className="row main-content bg-success text-center">
                     <div className="col-md-3 company__info">
                         <span className="company__logo"><h2><span className="fa fa-android"></span></h2></span>
