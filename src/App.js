@@ -9,15 +9,16 @@ import Login from "./Components/login.component";
 import Page from "./Components/landing-page.component";
 import StartProject from "./Components/start-project.component";
 import ProjectList from "./Components/project-list.component";
+import Index from "./views/Index";
 
 class App extends Component {
   render() {
     return (
       <div>
         <Router>
-          
+            <Route path="/" exact component={Index} /> 
             <Route path="/page/:id" component={Page} />
-            <Route path="/" exact component={Signup} />
+            <Route path="/signup" component={Signup} /> 
             <Route path="/login" component={Login} />
             <Route path="/start/:id" component={StartProject} />
             <Route path="/view/:id" component={ProjectList} />

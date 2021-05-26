@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './signup.css';
-
+import Nav2 from "./Nav/Nav2";
 import web3 from '../migrations/web3';
-
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
@@ -120,6 +119,7 @@ export default class Signup extends Component {
       }
       };
         return (
+          <div><Nav2></Nav2>
             <div className="wrapper">
                 <div className="form-wrapper">
                     <h1 className="signup-h1"> Create Account</h1>
@@ -162,6 +162,7 @@ export default class Signup extends Component {
                         </form>
                     </div>
                 <div className="warningtext">Already Have an account? <Link to="/login">Login</Link></div>
+            </div>
             </div>
       )
   }
