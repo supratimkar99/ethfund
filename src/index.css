@@ -33,7 +33,20 @@ code {
 }
 
 .logout {
-    position: absolute;
-    right: 5%;
+  position: absolute !important;
+  right: 5% !important; 
+  font-size: 20px !important;
+  font-weight:bolder;
 }
 
+.nav-link{
+  font-size: larger; 
+  margin-top: 0;
+  font-size: 25px !important;
+  font-weight: 500 !important;
+}
+
+.navbar-brand{
+  font-size: 40px !important;  
+  font-weight: 500;
+}

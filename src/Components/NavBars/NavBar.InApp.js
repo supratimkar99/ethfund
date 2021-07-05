@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ethpic from '../../Images/ethpic.png';
-
+import "../../index.css"
 
 export default class Navbar extends Component {
 
@@ -29,7 +29,7 @@ export default class Navbar extends Component {
                                 <Link to={"/onsale/"+this.props.Redirect} className="nav-link">On Sale</Link>
                             </li>
                             <li className="navbar-item">
-                                <Link to="/login" className="logout">Logout</Link>
+                                <Link to="/login" className="logout">LogOut</Link>
                             </li>
                         </ul>
                     </div>
