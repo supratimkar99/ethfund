@@ -1,12 +1,10 @@
 import React from "react";
-
-import Nav from "../Nav/Nav";
+import Nav from "../NavBars/NavBar";
 
 function Header() {
     return (
         <Nav />
     );
-
 }
 
 export default Header;

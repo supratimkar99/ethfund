@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Navbar from './navbar.component';
+import Navbar from './NavBars/NavBar.InApp';
 
 import web3 from '../migrations/web3';
 import ethfundInstance from '../migrations/ethfundInstance';

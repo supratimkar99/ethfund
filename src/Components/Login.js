@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import "./login.css"
-import logo from "../ethpic.png";
-import Nav2 from "./Nav/Nav2";
+import "../css/login.css"
+import logo from "../Images/ethpic.png";
+import Nav2 from "./NavBars/NavBar.blank";
 
 export default class Login extends Component {
 
@@ -89,7 +89,7 @@ export default class Login extends Component {
                                 </form>
                             </div>
                             <div className="row">
-                                <p>Don't have an account?  <Link to="/">Register Here</Link></p>
+                                <p>Don't have an account?  <Link to="/signup">Register Here</Link></p>
                             </div>
                         </div>
                     </div>

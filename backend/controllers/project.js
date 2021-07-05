@@ -34,6 +34,16 @@ module.exports = {
                 res.json(result)
             }
         })
+    },
+    update: function(req, res, next) {
+        stakeModel.find({UserAddress: req.params.project}, function(err,result) {
+            if(err) {
+                next(err);
+            }
+            else {
+                res.json(result)
+            }
+        })
     }
 }
     

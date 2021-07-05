@@ -2,21 +2,19 @@ import React from "react";
 
 function Content() {
     return (
-        <div>
-            <div id="container">
+        <div id="container">
             <div className="container content" >
                 <div className="row1">
-                    <div className="col-sm-3 talk" id="content">
+                    <div className="col-sm-3 talk">
                         <h2>Crowdfunding</h2>
                         <h5>Made Easy</h5>
                         <br/>
-                    <ul>
-                    <li>Use our platform to raise funds or to find interesting projects to invest into, without having to use a third-party site.</li>
-                    <li>Built on a decentralized system that runs on Blockchain technology, all the drawbacks of traditional platoforms are eliminated.</li>
-                    </ul>
+                        <ul>
+                            <li>Use our platform to raise funds or to find interesting projects to invest into, without having to use a third-party site.</li>
+                            <li>Built on a decentralized system that runs on Blockchain technology, all the drawbacks of traditional platoforms are eliminated.</li>
+                        </ul>
                         <br />
                     </div>
-                   
                 </div>
             </div>
 
@@ -53,7 +51,6 @@ function Content() {
                     </div>
                 </div>
             </section>
-            </div>
         </div>
     );
 }

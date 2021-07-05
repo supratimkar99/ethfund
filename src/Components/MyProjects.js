@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import Navbar from './navbar.component';
+import Navbar from './NavBars/NavBar.InApp';
 import web3 from '../migrations/web3';
 
 const Project = props => (

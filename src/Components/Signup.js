@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './signup.css';
-import Nav2 from "./Nav/Nav2";
+import '../css/signup.css';
+import Nav2 from "./NavBars/NavBar.blank";
 import web3 from '../migrations/web3';
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/

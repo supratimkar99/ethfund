@@ -32,3 +32,8 @@ code {
   left: 500px;
 }
 
+.logout {
+    position: absolute;
+    right: 5%;
+}
+
