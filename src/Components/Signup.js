@@ -119,7 +119,7 @@ export default class Signup extends Component {
       }
       };
         return (
-          <div><Nav2></Nav2>
+          <div className="signupbackground"><Nav2></Nav2>
             <div className="wrapper">
                 <div className="form-wrapper">
                     <h1 className="signup-h1"> Create Account</h1>

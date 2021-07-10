@@ -1,5 +1,5 @@
 const projectModel = require("../models/project");
-const stakeModel = require("../models/stake")
+const stakeModel = require("../models/stake");
 
 module.exports = {
     create: function(req, res, next) {
@@ -13,13 +13,13 @@ module.exports = {
             } else {
                 
                 stakeModel.create({ProjectAddress: result.ProjectAddress,
-                                UserAddress: req.body.UserAdddress,
+                                UserAddress: req.body.UserAddress,
                                 ProjectTitle: req.body.ProjectName },
                 function(error, result2) {
                     if(error) {
                         next(error)
                     } else {
-                        res.json({status: "success", message: "Project Created", data: result})
+                        res.json({status: "success", message: "Project Created", data: result, data2: result2})
                     }
                 })
             }
@@ -35,8 +35,8 @@ module.exports = {
             }
         })
     },
-    update: function(req, res, next) {
-        stakeModel.find({UserAddress: req.params.project}, function(err,result) {
+    getDetails: function(req, res, next) {
+        projectModel.findOne({ProjectAddress: req.params.id}, function(err,result) {
             if(err) {
                 next(err);
             }

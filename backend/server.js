@@ -1,6 +1,7 @@
 const express = require('express');
 const users = require('./Routes/users');
 const projects = require('./Routes/projects');
+const bids = require('./Routes/bids');
 
 const app = express();
 const port = 4000;
@@ -29,7 +30,9 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use('/project', projects)
+app.use('/projects', projects)
+
+app.use('/bids', bids);
 
 // app.use('/classes', validateUser, classes);  //for authentication
 

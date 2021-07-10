@@ -83,7 +83,7 @@ export default class StartProject extends Component {
             UserAdddress: this.state.account,
         };
 
-        axios.post('http://localhost:4000/project/create', newProject)
+        axios.post('http://localhost:4000/projects/create', newProject)
             .then(res => {
                 console.log(res.data);
                 alert("Project Created");
