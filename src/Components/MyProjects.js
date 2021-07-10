@@ -38,7 +38,7 @@ export default class ProjectList extends Component {
 
         await this.loadBlockchainData();
 
-        axios.get('http://localhost:4000/project/list/'+this.state.account)
+        axios.get('http://localhost:4000/projects/list/'+this.state.account)
             .then(response => {
                 this.setState({ projects: response.data});
             })
