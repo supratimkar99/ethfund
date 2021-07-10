@@ -62,7 +62,6 @@ export default class Login extends Component {
                     <Nav2></Nav2>
                     <div className="row main-content bg-success text-center">
                         <div className="col-md-3 company__info">
-                            <span className="company__logo"><h2><span className="fa fa-android"></span></h2></span>
                             <img src={logo} width="80" height="80" alt="Online Academic Tracker" />
                         </div>
                         <div className="col-md-9 col-xs-12 col-sm-12 login_form ">
