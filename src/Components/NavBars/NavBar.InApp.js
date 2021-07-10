@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ethpic from '../../Images/ethpic.png';
-
-
+import "../../index.css"
 export default class Navbar extends Component {
 
     constructor(props) {
@@ -14,7 +13,7 @@ export default class Navbar extends Component {
             <div>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <span className="navbar-brand">
-                        <img src={ethpic} width="30" height="30" alt="Online Academic Tracker" />
+                        <img src={ethpic} width="50" height="50" alt="Online Academic Tracker" />
                     </span>
                     <span className="navbar-brand">EthFund</span>
                     <div className="collapse navbar-collapse">
@@ -29,7 +28,7 @@ export default class Navbar extends Component {
                                 <Link to={"/onsale/"+this.props.Redirect} className="nav-link">On Sale</Link>
                             </li>
                             <li className="navbar-item">
-                                <Link to="/login" className="logout">Logout</Link>
+                                <Link to="/login" className="logout">LogOut</Link>
                             </li>
                         </ul>
                     </div>

@@ -7,7 +7,7 @@
 	box-shadow: 14px 14px 20px #cbced1,-14px -14px 20 px white;
 }
 .company__info{
-	background-color: #8fcccc;
+	background-color: #51DACF;
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 	display: flex;
@@ -33,7 +33,7 @@
 	.main-content{width: 70%;}
 }
 .row > h2{
-	color:#008080;
+	color:darkblue;
 }
 
 .login_form{
@@ -46,7 +46,7 @@
 }
 form{
     padding: 0 2em;
-    width: 85%;
+    width: 100%;
 }
 .form__input{
 	width: 100%;
@@ -58,27 +58,23 @@ form{
 	outline:none;
 	margin:1.5em auto;
 	transition: all .5s ease;
-	box-shadow: 14px 14px 20px#0b9b9b,-14px -14px 20 px white;
+	box-shadow: 14px 14px 20px skyblue,-14px -14px 20 px white;
 }
-.form__input:focus{
-	border-bottom-color: #008080;
-	box-shadow: 0 0 5px rgba(0,80,80,.4); 
-	border-radius: 4px;
-}
+
 .btn{
 	transition: all .5s ease;
 	width: 70%;
 	border-radius: 30px;
-	color:#008080;
+	color:darkblue;
 	font-weight: 600;
 	background-color: #fff;
-	border: 1px solid #008080;
+	border: 1px solid darkblue;
 	margin-top: 1.5em;
 	margin-bottom: 1em;
 	margin-left: 2.5em;
 }
 .btn:hover, .btn:focus{
-	background-color: #008080;
+	background-color: darkblue;
 	color:#fff;
 }
 .tr {
@@ -90,6 +86,6 @@ form{
 	font-style:oblique;
 	margin-left: 1.5em;
 }
-
-
-
+.background2{
+	background-color: lightblue;
+}
