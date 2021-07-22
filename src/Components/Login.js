@@ -48,8 +48,21 @@ export default class Login extends Component {
             .then(res => {
                 console.log(res.data);
                 if(res.data.status === "success") {
-                    //alert("Login Successful !");
-                    this.props.history.push("/page/"+res.data.userId);
+                    
+                    localStorage.setItem("userID",res.data.user._id);
+
+                    axios.get('http://localhost:4000/users/'+res.data.user._id)
+                        .then(response => {
+                            localStorage.setItem('account',response.data.address);
+                            localStorage.setItem('name',response.data.name);
+                        })
+                        .catch(function (error){
+                            console.log(error);
+                        })
+
+                setTimeout(()=> { this.props.history.push("/page"); },100);
+                        
+
                 } else {
                     alert("Invalid Username or Password !")
                 }
@@ -57,43 +70,42 @@ export default class Login extends Component {
     }
     render() {
         return (
-            <div className="container-fluid">
-                <div className="background2">
-                    <Nav2></Nav2>
-                    <div className="row main-content bg-success text-center">
-                        <div className="col-md-3 company__info">
-                            <img src={logo} width="80" height="80" alt="Online Academic Tracker" />
-                        </div>
-                        <div className="col-md-9 col-xs-12 col-sm-12 login_form ">
-                            <div className="container-fluid">
-                                <div className="row tr">
-                                    <h2 className="loginheading">Log In</h2>
-                                </div>
-                                <div className="row">
-                                    <form onSubmit={this.onSubmit} className="form-group">
-                                        <div className="row">
-                                            <input type="text" 
-                                            value={this.state.Username}
-                                            onChange={this.onChangeUsername} 
-                                            className="form__input" placeholder="Username"/>
-                                        </div>
-                                        <div className="row">
-                                            <input type="password" 
-                                            value={this.state.Password}
-                                            onChange={this.onChangePassword}
-                                            className="form__input" placeholder="Password"/>
-                                        </div>
-                                        <div className="row">
-                                            <input type="submit" value="Login" className="btn" />
-                                        </div>
-                                    </form>
-                                </div>
-                                <div className="row">
-                                    <p>Don't have an account?  <Link to="/signup">Register Here</Link></p>
-                                </div>
+            <div className="signupbackground" style={{paddingBottom: "62px"}}>
+                <Nav2></Nav2>
+                <div className="row main-content bg-success text-center" style={{width: "30%"}}>
+                    <div className="col-md-3 company__info">
+                        <img src={logo} width="80" height="80" alt="Online Academic Tracker" />
+                    </div>
+                    <div className="col-md-9 col-xs-12 col-sm-12 login_form ">
+                        <div className="container-fluid">
+                            <div className="row tr">
+                                <h2 className="loginheading">Log In</h2>
                             </div>
+                            <div className="row">
+                                <form onSubmit={this.onSubmit} className="form-group">
+                                    <div className="row">
+                                        <input type="text" 
+                                        value={this.state.Username}
+                                        onChange={this.onChangeUsername} 
+                                        className="form__input" placeholder="Username"/>
+                                    </div>
+                                    <div className="row">
+                                        <input type="password" 
+                                        value={this.state.Password}
+                                        onChange={this.onChangePassword}
+                                        className="form__input" placeholder="Password"/>
+                                    </div>
+                                    <div className="row">
+                                        <input type="submit" value="Login" className="btn" />
+                                    </div>
+                                </form>
+                            </div>
+                            
                         </div>
                     </div>
+                </div>
+                <div className="warningtext" style={{textAlign: "center", marginTop:"-40px"}}>
+                    <p>Don't have an account?  <Link to="/signup">Register Here</Link></p>
                 </div>
             </div>
         )

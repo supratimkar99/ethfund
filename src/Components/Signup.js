@@ -119,9 +119,9 @@ export default class Signup extends Component {
       }
       };
         return (
-          <div className="signupbackground"><Nav2></Nav2>
-            <div className="wrapper">
-                <div className="form-wrapper">
+          <div className="signupbackground" style={{paddingBottom: "20px"}}><Nav2></Nav2>
+            <div className="wrapper" style={{paddingBottom: "60px"}}>
+                <div className="form-wrapper" style={{width:"30%"}}>
                     <h1 className="signup-h1"> Create Account</h1>
                     <br />
                         <form onSubmit={this.onSubmit} className="signup-form">
@@ -161,7 +161,7 @@ export default class Signup extends Component {
                             </div>
                         </form>
                     </div>
-                <div className="warningtext">Already Have an account? <Link to="/login">Login</Link></div>
+                <div className="warningtext" style={{paddingTop:"30px"}}>Already Have an account? <Link to="/login">Login</Link></div>
             </div>
             </div>
       )

@@ -14,7 +14,6 @@ export default class StartProject extends Component {
         this.onChangeProjectDesc = this.onChangeProjectDesc.bind(this);
         this.onChangeWebsite = this.onChangeWebsite.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-        this.loadBlockchainData = this.loadBlockchainData.bind(this);
 
         this.state = {
             account: '',
@@ -25,13 +24,9 @@ export default class StartProject extends Component {
         }
     }
 
-    async loadBlockchainData() {
-        const accounts = await web3.eth.getAccounts();
-        console.log(accounts[0]);
-        this.setState({
-          account: accounts[0]
-        })
-      }
+    async componentDidMount() {
+        await this.setState({ account: localStorage.getItem('account') });
+    }
 
     onChangeProjectName(e) {
         this.setState( {
@@ -53,12 +48,13 @@ export default class StartProject extends Component {
 
     async onSubmit(e) {
         e.preventDefault();
-        await this.loadBlockchainData();
+        console.log(this.state.account);
 
         await ethfundInstance.methods.startProject(
             this.state.project_name,
         ).send({
             from: this.state.account,
+            gasPrice: '500000000000',
         }).then((res) => {
             this.setState ({
                 project_address : res.events.ProjectStarted.returnValues.contractAddress
@@ -80,30 +76,24 @@ export default class StartProject extends Component {
             ProjectDesc: this.state.project_desc,
             Website: this.state.website,
             ProjectAddress: this.state.project_address,
-            UserAdddress: this.state.account,
+            UserAddress: this.state.account,
         };
 
         axios.post('http://localhost:4000/projects/create', newProject)
             .then(res => {
                 console.log(res.data);
                 alert("Project Created");
-                window.location.replace(`http://localhost:3000/page/${this.props.match.params.id}`);
+                window.location.replace("http://localhost:3000/page");
             });
-        
-        /*this.setState({
-            class_name: '',
-            class_code: '',
-            class_owner: '',
-            class_desc: ''
-        })*/
+
     }
     
     render() {
         return (
             <div>
-            <Navbar Redirect={this.props.match.params.id}/>
-            <div className="container" style={{width: 700}}>
-                <h3>&nbsp;&nbsp;&nbsp;Start A New Project</h3>
+            <Navbar />
+            <div className="container" style={{ marginTop: "30px", width: "40%", border: "1px solid lightgray", boxShadow: "0 8px 8px 0 gray" }}>
+                <h3 style={{marginTop: "30px"}}>&nbsp;&nbsp;&nbsp;Start A New Project</h3>
                 <br/>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group"> 

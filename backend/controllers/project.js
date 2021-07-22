@@ -12,9 +12,10 @@ module.exports = {
                 next(err)
             } else {
                 
-                stakeModel.create({ProjectAddress: result.ProjectAddress,
+                stakeModel.create({ProjectAddress: req.body.ProjectAddress,
                                 UserAddress: req.body.UserAddress,
-                                ProjectTitle: req.body.ProjectName },
+                                ProjectTitle: req.body.ProjectName,
+                                StakeValue: 100 },
                 function(error, result2) {
                     if(error) {
                         next(error)
@@ -44,6 +45,35 @@ module.exports = {
                 res.json(result)
             }
         })
-    }
+    },
+    deleteStake: function(req, res, next) {
+        stakeModel.findOneAndDelete({
+            ProjectAddress: req.params.add,
+            StakeValue: 100
+        }, 
+            function(err, result) {
+                if(err) {
+                    next(err);
+                } else {
+                    res.json({status: "success", message: "Stake upadted Successfully!!", data: result})
+                }
+            }
+        )
+    },
+    newStake: function(req, res, next) {
+        stakeModel.create({
+            ProjectAddress: req.body.ProjectAddress,
+            UserAddress: req.body.UserAddress,
+            ProjectTitle: req.body.ProjectName,
+            StakeValue: req.body.StakeValue
+        },
+        function(error, result) {
+        if(error) {
+            next(error)
+        } else {
+            res.json({status: "success", message: "Stake added successfully", data: result})
+        }
+        })
+    },
 }
     

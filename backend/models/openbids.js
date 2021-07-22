@@ -6,6 +6,16 @@ const activeBidsSchema = new mongoose.Schema({
         trim: true,
         required: true
     },
+    ProjectName: {
+        type: String,
+        trim: true,
+        required: true,
+    },
+    isActive: {
+        type: Boolean,
+        trim: true,
+        default: true,
+    },
     OwnerAddress: {
         type: String,
         trim: true,

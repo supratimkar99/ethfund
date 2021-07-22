@@ -4,31 +4,31 @@ import ethpic from '../../Images/ethpic.png';
 import "../../index.css"
 export default class Navbar extends Component {
 
-    constructor(props) {
-        super(props);
+    handleLogout() {
+        localStorage.clear();
     }
 
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav className="navbar navbar-expand-lg navbar-light">
                     <span className="navbar-brand">
-                        <img src={ethpic} width="50" height="50" alt="Online Academic Tracker" />
+                        <img src={ethpic} width="50" height="50" alt="Ethfund" />
                     </span>
                     <span className="navbar-brand">EthFund</span>
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav mr-auto">
                             <li className="navbar-item">
-                                <Link to={"/page/"+this.props.Redirect} className="nav-link">Home</Link>
+                                <Link to={"/page/"} className="nav-link" style={this.props.Active === "Home" ? {fontSize: "30px", marginTop:"-5px"} : null }>Home</Link>
                             </li>
                             <li className="navbar-item">
-                                <Link to={"/view/"+this.props.Redirect} className="nav-link">My Projects</Link>
+                                <Link to={"/view/"} className="nav-link" style={this.props.Active === "MyProjects" ? {fontSize: "30px", marginTop:"-5px"} : null }>My Projects</Link>
                             </li>                                
                             <li className="navbar-item">
-                                <Link to={"/onsale/"+this.props.Redirect} className="nav-link">On Sale</Link>
+                                <Link to={"/onsale/"} className="nav-link" style={this.props.Active === "OnSale" ? {fontSize: "30px", marginTop:"-5px"} : null }>On Sale</Link>
                             </li>
                             <li className="navbar-item">
-                                <Link to="/login" className="logout">LogOut</Link>
+                                <Link to="/login" className="logout"><span onClick={() => { this.handleLogout(); }}>LogOut</span></Link>
                             </li>
                         </ul>
                     </div>

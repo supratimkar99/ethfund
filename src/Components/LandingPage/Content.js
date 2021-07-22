@@ -6,7 +6,7 @@ function Content() {
             <div className="container content" >
                 <div className="row1">
                     <div className="col-sm-3 talk">
-                        <h2>Crowdfunding</h2>
+                        <h2>Funding Raising</h2>
                         <h5>Made Easy</h5>
                         <br/>
                         <ul>
@@ -18,34 +18,34 @@ function Content() {
                 </div>
             </div>
 
-            <section class="features-icons bg-light text-center det-ails">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                                <div class="features-icons-icon d-flex  icon-bra-ails">
-                                    <i class="icon-screen-desktop m-auto text-primary icon-ails"></i>
+            <section className="features-icons bg-light text-center det-ails">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-4">
+                            <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                                <div className="features-icons-icon d-flex  icon-bra-ails">
+                                    <i className="icon-screen-desktop m-auto text-primary icon-ails"></i>
                                 </div>
                                 <h5>Cross-browser Compatibility</h5>
-                                <p class="lead mb-0">Our services can be accessed through multiple browsers.</p>
+                                <p className="lead mb-0">Our services can be accessed through multiple browsers.</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                                <div class="features-icons-icon d-flex  icon-bra-ails">
-                                    <i class="icon-layers m-auto text-primary icon-ails"></i>
+                        <div className="col-lg-4">
+                            <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                                <div className="features-icons-icon d-flex  icon-bra-ails">
+                                    <i className="icon-layers m-auto text-primary icon-ails"></i>
                                 </div>
                                 <h5>Secure</h5>
-                                <p class="lead mb-0">Use of decentralised architecture ensures a safe and secure platform for our users. </p>
+                                <p className="lead mb-0">Use of decentralised architecture ensures a safe and secure platform for our users. </p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                                <div class="features-icons-icon d-flex  icon-bra-ails">
-                                    <i class="icon-check m-auto text-primary icon-ails"></i>
+                        <div className="col-lg-4">
+                            <div className="features-icons-item mx-auto mb-0 mb-lg-3">
+                                <div className="features-icons-icon d-flex  icon-bra-ails">
+                                    <i className="icon-check m-auto text-primary icon-ails"></i>
                                 </div>
                                 <h5>Trusted</h5>
-                                <p class="lead mb-0">Trusted by many business owners and users.</p>
+                                <p className="lead mb-0">Trusted by many business owners and users.</p>
                             </div>
                         </div>
                     </div>

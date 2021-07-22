@@ -121,6 +121,23 @@ const abi = [
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "ownerStake",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "buyerStake",
+				"type": "uint256"
+			}
+		],
+		"name": "PaymentDone",
+		"type": "event"
 	}
 ];
 

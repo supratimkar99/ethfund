@@ -18,12 +18,12 @@ class App extends Component {
       <div>
         <Router>
           <Route path="/" exact component={Index} /> 
-          <Route path="/page/:id" component={Page} />
+          <Route path="/page" component={Page} />
           <Route path="/signup" component={Signup} /> 
           <Route path="/login" component={Login} />
-          <Route path="/start/:id" component={StartProject} />
-          <Route path="/view/:id" component={ProjectList} />
-          <Route path="/onsale/:id" component={Onsale} />        
+          <Route path="/start" component={StartProject} />
+          <Route path="/view" component={ProjectList} />
+          <Route path="/onsale" component={Onsale} />        
         </Router>
       </div>
     );

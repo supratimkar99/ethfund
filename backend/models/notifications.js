@@ -1,26 +1,26 @@
 const mongoose = require('mongoose');
 
-const stakeSchema = new mongoose.Schema({
-    ProjectTitle: {
+const notificationSchema = new mongoose.Schema({
+    Receiver: {
         type: String,
         trim: true,
         required: true
     },
-    ProjectAddress: {
+    SellerAddress: {
         type: String,
         trim: true,
         required: true
     },
-    UserAddress: {
+    OpenBidID: {
         type: String,
         trim: true,
-        required: true
+        required: true,
     },
-    StakeValue: {
+    BidValue: {
         type: Number,
         trim: true,
         required: true,
     }
 })
 
-module.exports = mongoose.model('Stake', stakeSchema);
+module.exports = mongoose.model('Notifications', notificationSchema);
